@@ -1,0 +1,26 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "description": "common tools for production",
+  "main": "index.js",
+  "dependencies": {
+    "gulp.spritesmith": "^6.5.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files=\"webpage/*,*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranrantu/Tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranrantu/Tools/issues"
+  },
+  "homepage": "https://github.com/ranrantu/Tools#readme"
+}
