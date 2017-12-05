@@ -4,7 +4,8 @@
   "description": "common tools for production",
   "main": "index.js",
   "dependencies": {
-    "gulp.spritesmith": "^6.5.1"
+    "gulp.spritesmith": "^6.5.1",
+    "koa": "^2.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13"
