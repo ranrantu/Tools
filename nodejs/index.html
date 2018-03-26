@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>async-loading-image</title>
+</head>
+<body>
+	<img id="ii" alt="">
+	<script>
+		// var ii = document.getElementById('ii');
+		// console.log(ii)
+		// var baseUrl = '../images/';
+		// var imageList = ['starinfo.png','sun.png','tornadoinfo.png'];
+		// var i = 0;
+		// function asyncLoader(imgUrl){
+		// 	return new Promise(function (resolve,reject){
+		// 		setTimeout(function (){
+		// 			var img = new Image();
+		// 			img.onload = function (){
+		// 				console.log(i,imgUrl);
+		// 				ii.src = baseUrl + imgUrl;
+		// 				if((i+1)<imageList.length){
+		// 					i++;
+		// 					asyncLoader(imageList[i]);
+		// 				}
+		// 			}
+		// 			img.src = baseUrl + imageList[i];
+		// 		},500);
+		// 	})
+		// }
+		// asyncLoader(imageList[i]);
+
+		// promise.then(function(){}).then(function(){})
+
+		// function delay(time){
+		// 	return new Promise(resolve=>setTimeout(resolve,time));
+		// }
+		// delay(1000).then(()=>{
+		// 	console.log(1);
+		// }).then(()=>delay(1000)).then(()=>{
+		// 	console.log(2)
+		// })
+
+		// var printList = [1,2,3,4,5,6];
+		// var i = 0;
+
+		// function asyncPrinter(content,time){
+		// 	return new Promise(resolve=>setTimeout(resolve,time)).then(()=>{
+		// 		if((i+1)<printList.length){
+		// 			console.log(content,time)
+		// 			i++;
+		// 			asyncPrinter(printList[i],time)
+		// 		}
+		// 	})
+		// }
+		// function printer(list,time){
+		// 	asyncPrinter(list[i],time);
+		// }
+		// printer(printList,500)
+		const log = console.log;
+
+		log(1)
+		requestAnimationFrame(function (){log('bbb')})
+
+		new Promise(function (resolve){
+			log(2)
+			setTimeout(function (){log(5)},0)
+			resolve()
+		}).then(function (){
+			log(3);
+		}).then(function (){
+			setTimeout(function (){log('aaa')},0)
+		})
+		log(4)
+	</script>
+</body>
+</html>
